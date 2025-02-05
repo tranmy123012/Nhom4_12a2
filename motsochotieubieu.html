@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chợ Tiêu Biểu Tỉnh Bến Tre</title>
+    <style>
+        /* Đặt kiểu nền cho toàn bộ trang */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            transition: background-color 0.5s ease-in-out;
+            animation: fadeBackground 5s infinite alternate;
+        }
+
+        /* Hiệu ứng pha loãng nền trang */
+        @keyframes fadeBackground {
+            0% { background-color: rgba(255, 0, 0, 0.1); }
+            25% { background-color: rgba(0, 255, 0, 0.1); }
+            50% { background-color: rgba(0, 0, 255, 0.1); }
+            75% { background-color: rgba(255, 255, 0, 0.1); }
+            100% { background-color: rgba(0, 255, 255, 0.1); }
+        }
+
+        /* Căn giữa nội dung */
+        .container {
+            width: 80%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            margin-top: 30px;
+        }
+
+        /* Tiêu đề */
+        h1 {
+            text-align: center;
+            color: #2d6a4f;
+            font-size: 4em;
+            margin-bottom: 20px;
+        }
+
+        /* Các đoạn văn bản */
+        p {
+            font-size: 1.5em;
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        /* Danh sách các chợ */
+        ol {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        li {
+            font-size: 1.5em;
+            margin-bottom: 30px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            padding: 20px;
+            border-radius: 8px;
+            background-color: #fff;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        /* Hiệu ứng hover cho các mục */
+        li:hover {
+            transform: scale(1.05);
+            background-color: #e0f7fa;
+        }
+
+        /* Nội dung bên trái của mỗi mục */
+        .content-left {
+            flex: 1;
+            max-width: 65%;
+        }
+
+        /* Nội dung bên phải của mỗi mục (ảnh) */
+        .content-right {
+            max-width: 35%;
+            text-align: right;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        /* Hiệu ứng cuộn trang */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Màu nền của các mục khi cuộn trang */
+        .fade-in.visible {
+            background-color: #e0f7fa;
+        }
+
+        /* Thêm hiệu ứng nền khi hover vào từng mục */
+        li:hover {
+            background-color: #b2ebf2;
+        }
+
+        /* Hiệu ứng cho ảnh */
+        .image-container img {
+            transition: transform 0.3s ease;
+        }
+
+        .image-container img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Thêm hiệu ứng chuyển động cho trang */
+        @keyframes pageLoad {
+            0% {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        body {
+            animation: pageLoad 1s ease-out;
+        }
+
+        /* Căn giữa các liên kết */
+        .navigation {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .navigation a {
+            margin: 0 20px;
+            text-decoration: none;
+            font-size: 1.2em;
+            padding: 10px 20px;
+            border-radius: 8px;
+            background-color: #009688;
+            color: #fff;
+            transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+            display: inline-block;
+        }
+
+        /* Hiệu ứng hover cho các liên kết */
+        .navigation a:hover {
+            background-color: #00796b;
+            color: #fff;
+            transform: scale(1.05);
+        }
+
+        /* Hiệu ứng cuộn chữ */
+        .navigation a {
+            animation: slideIn 1s ease-out;
+        }
+
+        @keyframes slideIn {
+            0% {
+                transform: translateX(-100%);
+            }
+            100% {
+                transform: translateX(0);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Chợ Tiêu Biểu Tỉnh Bến Tre</h1>
+        <p><strong>Chợ Bến Tre, với lịch sử lâu đời, là một phần không thể thiếu trong đời sống người dân địa phương và du khách. Dưới đây là một số chợ tiêu biểu ở tỉnh Bến Tre:</strong></p>
+
+        <ol>
+           <li class="fade-in">
+                <div class="content-left">
+                    <strong>Chợ Bến Tre (Chợ Trung tâm tỉnh)</strong>: Là chợ lớn và quan trọng nhất của tỉnh Bến Tre, chợ này trước năm 2000 là trung tâm giao thương chính. Sau năm 2000, chợ được cải thiện và hiện đại hóa để phục vụ nhu cầu mua sắm và du lịch.
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d251285.08284867162!2d106.08793268671873!3d10.23499329999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x310aa99dd51b2a83%3A0x1ee2dea6857dbef3!2zQ0jhu6IgQuG6vk4gVFJFIC0gQ-G7rEEgxJDDlE5H!5e0!3m2!1svi!2s!4v1738661724900!5m2!1svi!2s" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="content-right">
+                    <div class="image-container">
+                        <img src="chobentre.jpg" alt="Chợ Bến Tre">
+                    </div>
+                </div>
+            </li>
+            <li class="fade-in">
+                <div class="content-left">
+                    <strong>Chợ Lách</strong>: Nổi tiếng với các sản phẩm nông sản như trái cây, cây kiểng và các sản phẩm thủ công. Trước năm 2000, đây là chợ truyền thống của huyện Lách, nay đã trở thành một địa điểm giao thương quan trọng.
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31407.76062858324!2d106.11124613127362!3d10.2639944480188!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x310a9f067cb45cd7%3A0x30d4d828e2c5f531!2zQ2jhu6MgTMOhY2gsIELhur9uIFRyZSwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1738662789873!5m2!1svi!2s" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="content-right">
+                    <div class="image-container">
+                        <img src="cholach.jpg" alt="Chợ Lách">
+                    </div>
+                </div>
+            </li>
+            <li class="fade-in">
+                <div class="content-left">
+                    <strong>Chợ Cái Mơn</strong>: Một ngôi chợ khá nổi tiếng tại Bến Tre đó là Chợ Cái Mơn. Đây cũng là nơi bán đa dạng các mặt hàng cần thiết trong đời sống. Cái Mơn vốn được biết đến là khu vực nổi tiếng với nhiều giống trái cây ngon, cây giống và hoa kiểng. Bởi thế các loại hàng này được bán khá nhiều ở chợ.
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26414.903322357364!2d106.19538711851985!3d10.213193313544442!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31a00a7872e3fb7d%3A0x1ccb5da6cb7997a1!2zY2jhu6MgQ8OhaSBNxqFu!5e0!3m2!1svi!2s!4v1738662887619!5m2!1svi!2s" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="content-right">
+                    <div class="image-container">
+                        <img src="chocaimon.jpg" alt="Chợ Cái Mơn">
+                    </div>
+                </div>
+            </li>
+            <li class="fade-in">
+                <div class="content-left">
+                    <strong>Chợ Bình Đại</strong>: Chợ Bình Đại là chợ truyền thống của huyện Bình Đại, chuyên buôn bán thủy sản và nông sản. Đây là điểm đến quen thuộc của người dân trong khu vực.
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3926.927423835228!2d106.69093941121133!3d10.186549389886585!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317557d953f44b55%3A0x2e43fb38bfad928b!2zQ2jhu6MgQsOsbmggxJDhuqFp!5e0!3m2!1svi!2s!4v1738662943352!5m2!1svi!2s" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="content-right">
+                    <div class="image-container">
+                        <img src="chobinhdai.jpg" alt="Chợ Bình Đại">
+                    </div>
+                </div>
+            </li>
+            <li class="fade-in">
+                <div class="content-left">
+                    <strong>Chợ Ba Vát</strong>: Nhắc đến những khu chợ nổi tiếng ở Bến Tre phải nói đến Chợ Ba Vát. Đây cũng là một trong những địa điểm mua bán tấp nập và sầm uất, được biết chợ được xây đã lâu nhưng qua thời gian trùng tu, chợ vẫn giữ được nét đẹp dân dã, bình dị. Không gian bên trong và bên ngoài chợ khá thoáng.
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3926.9595552779165!2d106.27087831121135!3d10.183939989889046!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31a009ea5e62b1e3%3A0xb476444f772ca3db!2zQ2jhu6MgQmEgVsOhdA!5e0!3m2!1svi!2s!4v1738662994203!5m2!1svi!2s" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="content-right">
+                    <div class="image-container">
+                        <img src="chobavat.jpg" alt="Chợ Ba Vát">
+                    </div>
+                </div>
+            </li>
+            <li class="fade-in">
+                <div class="content-left">
+                    <strong>Chợ Thành Triệu</strong>: Đây là một ngôi chợ có tuổi đời khá lớn, được xây dựng từ những năm 1920. Cho đến nay, chợ đã được trùng tu và có dáng vẻ khang trang hơn. Khu chợ này khá đông vào thời điểm trước 7 giờ sáng. Vào buổi chiều, thường có một số hàng ăn hè phố và gánh hàng rong ở trước chợ.
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3925.580031707021!2d106.25549111121256!3d10.295382289783229!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x310aa4015649a86f%3A0xf46a0505481015b8!2zQ2jhu6MgVGjDoG5oIFRyaeG7h3U!5e0!3m2!1svi!2s!4v1738663036452!5m2!1svi!2s" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="content-right">
+                    <div class="image-container">
+                        <img src="chothanhtrieu.jpg" alt="Chợ Thành Triệu">
+                    </div>
+                </div>
+            </li>
+            <li class="fade-in">
+                <div class="content-left">
+                    <strong>Chợ Tiên Thủy</strong>: Bạn muốn thử trải nghiệm một ngày mua sắm ở chợ quê Bến Tre? Hãy ghé qua Chợ Tiên Thủy. Mặc dù là một khu chợ nhỏ nhưng khá khang trang và sạch sẽ hàng hóa vô cùng phong phú chủ yếu là các mặt hàng “cây nhà lá vườn”.
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3925.988691344372!2d106.23497424375017!3d10.262494267514898!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x310aa14589a06593%3A0x98ee98465a4482c1!2zQ2jhu6MgVGnDqm4gVGjhu6d5!5e0!3m2!1svi!2s!4v1738663119124!5m2!1svi!2s" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="content-right">
+                    <div class="image-container">
+                        <img src="chotienthuy.jpg" alt="Chợ Tiên Thủy">
+                    </div>
+                </div>
+            </li>
+        </ol>
+
+        <p><strong>Những chợ này không chỉ là các trung tâm thương mại mà còn là biểu tượng văn hóa của Bến Tre, nơi phản ánh sự phát triển và thay đổi của xã hội qua các thời kỳ.</strong></p>
+    </div>
+
+    <div class="navigation">
+        <a href="nay.html">Chợ Bến Tre Ngày Nay</a>
+        <a href="chotruyenthongvanay.html">Trang Chủ</a>
+        <a href="van-hoa.html">Giá Trị Văn Hóa</a>
+        <a href="xua.html">Chợ Xưa</a>
+        <a href="chobentretruocnam2000.html">Trước 2000</a>
+        <a href="chobentresaunam2000.html">Sau 2000</a>
+    </div>
+
+    <script>
+        // Tạo hiệu ứng cuộn trang khi xuất hiện
+        window.addEventListener('scroll', function () {
+            const items = document.querySelectorAll('.fade-in');
+            items.forEach(item => {
+                const position = item.getBoundingClientRect().top;
+                if (position < window.innerHeight && !item.classList.contains('visible')) {
+                    item.classList.add('visible');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

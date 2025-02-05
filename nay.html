@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chợ Bến Tre Nay</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Navigation Bar Styling */
+        nav {
+            background-color: lightsalmon;
+            padding: 15px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        nav ul li {
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 18px;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            background-color: #2980b9;
+            transform: scale(1.1);
+        }
+
+        /* Body Styling */
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #f7b731, #e67e22, #3498db);
+            background-size: 300% 300%;
+            animation: gradientAnimation 10s infinite;
+            color: #fff;
+            overflow-x: hidden;
+            padding-top: 80px; /* Đảm bảo nội dung không bị che bởi thanh điều hướng */
+        }
+
+        /* Gradient Animation */
+        @keyframes gradientAnimation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Container Styling */
+        .container {
+            width: 80%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-top: 40px;
+            text-align: center;
+        }
+
+        /* Title Styling */
+        .title {
+            font-size: 48px;
+            font-weight: bold;
+            color: #fff;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            background: linear-gradient(135deg, #ff7e5f, #feb47b);
+            background-size: 200% 200%;
+            animation: gradientText 5s infinite;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        /* Gradient Text Animation */
+        @keyframes gradientText {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Hover Effect for Title */
+        .title:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+            cursor: pointer;
+        }
+
+        /* Image Container */
+        .image-container {
+            margin-top: 40px;
+            text-align: center;
+            position: relative;
+            height: 400px; /* Đặt chiều cao cố định cho container */
+            overflow: hidden;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Images inside the container */
+        .image-container img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+
+        /* Active image */
+        .image-container img.active {
+            opacity: 1;
+        }
+
+        /* Fade-In Paragraph */
+        .fade-in {
+            opacity: 0;
+            animation: fadeIn 2s forwards;
+            margin-top: 40px;
+            font-size: 20px;
+            color: #fff;
+            line-height: 1.6;
+        }
+
+        /* Fade-In Animation */
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .title {
+                font-size: 36px;
+            }
+            nav ul {
+                flex-direction: column;
+            }
+            nav ul li {
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="xua.html">Chợ Bến Tre Xưa</a></li>
+            <li><a href="chotruyenthongvanay.html">Trang Chủ</a></li>
+            <li><a href="van-hoa.html">Giữ Gìn Bản Sắc Văn Hóa</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <!-- Title -->
+        <h1 class="title">Chợ Bến Tre Nay</h1>
+        <!-- Image Slider -->
+        <div class="image-container">
+            <img src="photo/chobentre.jpg" alt="Chợ Bến Tre ngày nay 1" class="active">
+            <img src="photo/choanduc.jpg" alt="Chợ Bến Tre ngày nay 2">
+            <img src="photo/chohoanghia.jpg" alt="Chợ Bến Tre ngày nay 3">
+        </div>
+        <!-- Description -->
+        <p class="fade-in">
+            Từ năm 2000 đến nay, chợ Bến Tre đã trải qua nhiều thay đổi đáng kể, phản ánh sự phát triển kinh tế và xã hội của khu vực. Nằm tại trung tâm thành phố, chợ không chỉ là nơi giao thương mà còn là điểm đến văn hóa, thu hút cả người dân địa phương và du khách.
+Phát triển cơ sở hạ tầng: Trong những năm qua, chợ Bến Tre đã được nâng cấp và mở rộng, với cơ sở hạ tầng hiện đại hơn, đáp ứng nhu cầu mua sắm ngày càng tăng của người dân. Việc cải thiện này giúp chợ trở nên khang trang và thuận tiện hơn cho cả người bán và người mua.
+Đa dạng hóa sản phẩm: Chợ tiếp tục duy trì sự phong phú về các mặt hàng, từ nông sản tươi sống, đặc sản địa phương đến các sản phẩm công nghiệp và tiêu dùng. Sự đa dạng này đáp ứng nhu cầu mua sắm đa dạng của khách hàng, đồng thời thúc đẩy kinh tế địa phương.
+Phát triển chợ đêm: Một điểm nhấn quan trọng là sự ra đời của chợ đêm Bến Tre, với hơn 180 gian hàng, bao gồm các mặt hàng may sẵn, lưu niệm, thủ công mỹ nghệ và ẩm thực. Chợ đêm hoạt động từ 17h00 đến 22h00 hàng ngày, tạo thêm không gian mua sắm và giải trí cho người dân và du khách. 
+        </p>
+    </div>
+    <script>
+        // JavaScript for automatic image slider
+        const images = document.querySelectorAll('.image-container img');
+        let currentIndex = 0;
+        function changeImage() {
+            // Remove 'active' class from all images
+            images.forEach((img, index) => {
+                img.classList.remove('active');
+            });
+            // Add 'active' class to the current image
+            images[currentIndex].classList.add('active');
+            // Update index for the next image
+            currentIndex = (currentIndex + 1) % images.length;
+        }
+        // Change image every 5 seconds (5000 milliseconds)
+        setInterval(changeImage, 3000);
+    </script>
+</body>
+</html>

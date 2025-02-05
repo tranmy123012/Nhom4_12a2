@@ -1,0 +1,244 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chợ Truyền Thống Bến Tre</title>
+<style>
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-image: url(photo/chobentre.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #333;
+    line-height: 1.6;
+    padding-top: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+    position: relative; /* Để các phần tử con có thể được định vị tuyệt đối */
+}
+/* Container Styling */
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 5px solid #2d6a4f;
+    border-radius: 30px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 40px;
+    animation: fadeIn 2s ease-out; 
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* Header Styling */
+h1 {
+    color: #2d6a4f;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    animation: slideIn 1s ease-out; 
+}
+@keyframes slideIn {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+/* Menu Styles */
+.menu {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    animation: fadeIn 2s ease-out; /* Fade-in effect for menu */
+}
+.menu li {
+    margin: 20px 30px;
+    position: relative; /* Để các phần tử con có thể được định vị tuyệt đối */
+}
+.menu li a {
+    text-decoration: none;
+    font-size: 2em;
+    padding: 20px 40px;
+    border-radius: 10px;
+    transition: all 0.3s ease; /* Transition for smooth hover effects */
+    display: inline-block;
+    text-shadow: 0 0 10px #FFD700, 0 0 20px #FFD700, 0 0 30px #FFD700;
+    color: #FFFFE0;
+    background-color: transparent;
+}
+/* Hover Effects for Menu */
+.menu li:nth-child(1) a:hover {
+    background-image: url(photo/choxua.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: scale(1.1); /* Enlarge on hover */
+    text-shadow: 0 0 15px #FFD700, 0 0 30px #FFD700, 0 0 45px #FFD700;
+}
+.menu li:nth-child(2) a:hover {
+    background-image: url(photo/choanduc.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: scale(1.1); /* Enlarge on hover */
+    text-shadow: 0 0 15px #FFD700, 0 0 30px #FFD700, 0 0 45px #FFD700;
+}
+.menu li:nth-child(3) a:hover {
+    background-image: url(photo/vanhoabentre.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: scale(1.1); /* Enlarge on hover */
+    text-shadow: 0 0 15px #FFD700, 0 0 30px #FFD700, 0 0 45px #FFD700;
+}
+.menu li:nth-child(4) a:hover {
+    background-image: url(photo/chotieubieu.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: scale(1.1); /* Enlarge on hover */
+    text-shadow: 0 0 15px #FFD700, 0 0 30px #FFD700, 0 0 45px #FFD700;
+}
+/* Dropdown Menu */
+.menu li .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: transparent;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    text-align: center;
+    border-radius: 10px;
+    margin-top: 10px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease, transform 0.5s ease;
+    transform: translateY(-10px);
+    text-shadow: 1px 1px 2px #ffffff; /* Viền trắng */
+}
+.menu li:hover .dropdown-content {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+.menu li .dropdown-content li {
+    margin: 0;
+    padding: 10px 0;
+}
+.menu li .dropdown-content li a {
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.menu li .dropdown-content li a:hover {
+    background-color: lightpink;
+    transform: scale(1.1);
+}
+/* Hover Effect for "Chợ Bến Tre" */
+.menu li:nth-child(4) a {
+    background-color:transparent;
+    color: #FFFFE0;
+}
+.menu li:nth-child(4) a:hover {
+    background-color: transparent;
+    color: #FFFFE0;
+    transform: scale(1.1);
+    text-shadow: 0 0 15px #FFD700, 0 0 30px #FFD700, 0 0 45px #FFD700;
+/* Social Media Links */
+.social-links {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    animation: fadeIn 2s ease-out;
+}
+.social-links a {
+    font-size: 1.5em;
+    color: #2d6a4f;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+.social-links a:hover {
+    background-color: #2d6a4f;
+    color: white;
+    transform: scale(1.2);
+}
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+    .menu li {
+        display: block;
+        margin: 10px 0;
+    }
+    .menu li a {
+        font-size: 1.5em;
+    }
+    .menu li .dropdown-content {
+        min-width: 100%;
+        margin-top: 5px;
+    }
+}
+</style>
+</head>
+<body>
+<!-- Content Container -->
+<div class="container">
+    <h1>Chợ Truyền Thống Bến Tre: Xưa và Nay</h1>
+</div>
+<!-- Menu Below the Container -->
+<ul class="menu">
+    <li><a href="xua.html">Chợ Bến Tre Xưa</a></li>
+    <li><a href="nay.html">Chợ Bến Tre Nay</a></li>
+    <li><a href="van-hoa.html">Giữ Gìn Bản Sắc Văn Hóa</a></li>
+    <li><a href="motsochotieubieu.html">Một Số Chợ Tiêu Biểu</li>
+    <li>
+        <a href="#">Chợ Bến Tre</a>
+        <ul class="dropdown-content">
+            <li><a href="chobentretruocnam2000.html">Chợ Bến Tre Trước 2000</a></li>
+            <li><a href="chobentresaunam2000.html">Chợ Bến Tre Sau 2000</a></li>
+        </ul>
+    </li>
+</ul>
+<!-- Social Media Links -->
+<div class="social-links">
+    <a href="#"><i class="fab fa-facebook-f"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+</div>
+</body>
+</html> 

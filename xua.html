@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chợ Bến Tre Xưa</title>
+    <style>
+        /* Cơ bản cho trang */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            scroll-behavior: smooth; /* Hiệu ứng cuộn mượt mà */
+        }
+        /* Menu trên cùng */
+        nav {
+            background-image: url(photo/bentre2.jpg);
+            background-position:center;
+            padding: 10px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav .logo {
+            color: #fff;
+            font-size: 2em;
+            margin-left: 20px;
+        }
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 1.1em;
+            padding: 8px 16px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        nav ul li a:hover {
+            background-color: darkcyan; /* Màu nền khi hover */
+            color: #fff;
+        }
+        /* Container chứa nội dung */
+        .container {
+            width: 80%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+        /* Tiêu đề chính */
+        h1 {
+            background-color: #61c0bf; /* Màu nền cho tiêu đề */
+            color: #2d6a4f; /* Màu chữ tiêu đề */
+            font-size: 2.5em;
+            padding: 10px;
+            border-radius: 10px;
+            display: inline-block;
+            margin-bottom: 50px;
+        }
+        /* Phần văn bản */
+        p {
+            font-size: 1.2em;
+            color: #555;
+            text-align: left; /* Căn lề trái cho văn bản */
+            margin-bottom: 20px;
+        }
+        /* Hình ảnh */
+        .image-container {
+            margin: 20px 0;
+            display: flex; /* Sử dụng Flexbox để xếp hình ảnh ngang nhau */
+            justify-content: center; /* Căn giữa các hình ảnh */
+            gap: 20px; /* Khoảng cách giữa các hình ảnh */
+        }
+        .image-container img {
+            width: 45%; /* Điều chỉnh kích thước hình ảnh, mỗi hình ảnh chiếm 45% chiều rộng */
+            height: auto;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Thêm menu -->
+    <nav>
+        <div class="logo">Chợ Bến Tre</div>
+        <ul>
+            <li><a href="chotruyenthongvanay.html">Trang chủ</a></li>
+            <li><a href="nay.html">Chợ Bến Tre Nay</a></li>
+            <li><a href="van-hoa.html">Giữ Gìn Bản Sắc Văn Hóa</a></li>
+            <!-- Thêm hai phần tử mới -->
+            <li><a href="chobentretruocnam2000.html">Chợ Bến Tre Trước Năm 2000</a></li>
+            <li><a href="chobentresaunam2000.html">Chợ Bến Tre Sau Năm 2000</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <h1>Chợ Bến Tre Xưa</h1>
+        <div class="content">
+            <p>Chợ Bến Tre trước năm 2000 là hình ảnh đặc trưng của chợ truyền thống miền Tây Nam Bộ, nơi mà nhịp sống sôi động và đầy màu sắc của vùng đất này được thể hiện rõ nét qua từng gian hàng, sản phẩm và những câu chuyện sinh động. Chợ là nơi giao thương chính của người dân, không chỉ bán buôn mà còn là không gian gắn kết cộng đồng, nơi mà mỗi buổi sáng sớm, những chiếc ghe, thuyền chở đầy nông sản, trái cây, cá tôm từ các miền quê lân cận đổ về, tạo nên một bức tranh sống động của một xã hội nông thôn.</p>
+            
+            <!-- Chỉnh sửa hình ảnh để chúng nằm ngang -->
+            <div class="image-container">
+                <img src="photo/choxua2.jpg" alt="Chợ Bến Tre xưa">
+                <img src="photo/choxua3.jpg" alt="Chợ Bến Tre xưa">
+            </div>
+            
+            <p>Trước năm 2000, các chợ Bến Tre thường tổ chức theo hình thức chợ nổi hoặc chợ truyền thống với mái tôn, sạp hàng đơn sơ, tạo nên không gian giản dị nhưng gần gũi và ấm cúng. Người dân vào chợ không chỉ để mua bán mà còn để gặp gỡ, trao đổi những câu chuyện đời thường, những thông tin trong vùng. Dù là chợ sáng hay chợ chiều, tiếng rao hàng, tiếng trò chuyện, cười đùa luôn vang vọng trong không gian mộc mạc, phản ánh nét văn hóa đặc trưng của miền Tây sông nước.</p>
+        </div>
+    </div>
+</body>
+</html>
